@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using UnityEngine;
 
 /// <summary>
 /// 課程 3 : 運算子
@@ -96,6 +97,17 @@ public class Class_3_Operator : MonoBehaviour
         Debug.Log(numberC <= numberD);  // 小於等於 False
         Debug.Log(numberC == numberD);  // 等    於 False
         Debug.Log(numberC != numberD);  // 不  等於 Trne
+        #endregion
+
+        #region 布林值邏輯運算子
+        Debug.Log("<color=#f93>--- 布林值邏輯運算子 ---</color>");
+        //邏輯否定 : 將布林值變成相反的值
+        Debug.Log(!true);
+        Debug.Log(!false);
+        bool boolVarTrne = true, boolVarfalse = false;
+        Debug.Log(!boolVarTrne);
+        Debug.Log(!boolVarfalse);
+
         #endregion
     }
 }
