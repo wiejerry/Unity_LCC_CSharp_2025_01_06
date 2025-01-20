@@ -45,6 +45,7 @@ public class Class_3_Operator : MonoBehaviour
     // 事件名稱是藍色的(沒有變色不影響)
     private void Awake()
     {
+        #region 輸出訊息
         // 將小括號內的訊息輸出到 Unity 的 Console 控制台面板
         // Clrl+ Shift + C 開啟控制台面板
         Debug.Log("哈嘍，沃克 :D");        // 輸出文字  
@@ -54,9 +55,47 @@ public class Class_3_Operator : MonoBehaviour
         Debug.Log("攻擊力 : {attack}");    // 沒有寫$
 
         Debug.Log("<b>粗體</b>");
-        Debug.Log("<color=oranger>橘色</color>");
+        Debug.Log("<color=orange>橘色</color>");
         //色碼 : #紅紅綠綠藍藍，數值 : 0 ~ 9， a ~ f 越右邊顏色越明亮 #000 黑 #fff 白
         Debug.Log("<color=#66aaff>藍色</color>");
         Debug.Log("<color=#6af>藍色</color>");
+        #endregion
+
+        #region 算術運算子
+        Debug.Log("<color=#f93>--- 算術運算子 ---</color>");
+        // 運算子:
+        // 1. 算術運算子
+        // 加、減、乘、除、餘
+        // +、-、*、/、%
+        Debug.Log(10 + 3);      // 13
+        Debug.Log(10 - 3);      // 7
+        Debug.Log(10 * 3);      // 30                 
+        Debug.Log(10 / 3);      // 3
+        Debug.Log(10 % 3);      // 10 / 3 = 3 餘 1 ，結果 1
+
+        Debug.Log("<color=#f93>--- 算術運算子 : 區域變數 ---</color>");
+        //區域變數 : 僅在此打括號內存取 (不需要修飾詞的變數)
+        float numberA = 10;
+        float numberB = 3;
+
+        Debug.Log(numberA + numberB);
+        Debug.Log(numberA - numberB);
+        Debug.Log(numberA * numberB);
+        Debug.Log(numberA / numberB);       //3.333
+        Debug.Log(numberA % numberB);
+        #endregion
+
+        #region 比較運算子
+        Debug.Log("<color=#f93>--- 比較運算子 ---</color>");
+        //比較運算值，使用後會得到布林值
+        int numberC = 100, numberD = 1;
+
+        Debug.Log(numberC > numberD);   // 大    於 Trne
+        Debug.Log(numberC < numberD);   // 小    於 False
+        Debug.Log(numberC >= numberD);  // 大於等於 Trne
+        Debug.Log(numberC <= numberD);  // 小於等於 False
+        Debug.Log(numberC == numberD);  // 等    於 False
+        Debug.Log(numberC != numberD);  // 不  等於 Trne
+        #endregion
     }
 }
