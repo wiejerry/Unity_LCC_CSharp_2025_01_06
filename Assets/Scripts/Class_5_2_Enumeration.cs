@@ -43,7 +43,7 @@ namespace Jerry
         /// <summary>
         private enum Item
         {
-            None = 0, Coin= 1, RedWater = 15, Chicken = 20
+            None = 0, Coin= 1, RedWater = 10, BlueWater = 15, Chicken = 20
         }
 
         [SerializeField, Header("道具")]
@@ -54,7 +54,28 @@ namespace Jerry
         private void Start()
         {
             Debug.Log((int)item);
-        }
 
+            // 列舉與判斷式 Switch
+            // switch + Tab * 2 > 修改 switch_on 為列舉 > Enter * 2 快速完成
+            switch (item)
+            {
+                case Item.None:
+                    Debug.Log("沒有道具");
+                    break;
+                case Item.Coin:
+                    Debug.Log("金幣");
+                    break;
+                case Item.BlueWater :
+                case Item.RedWater :
+                    Debug.Log("藥水道具");
+                    break;
+                case Item.Chicken:
+                    Debug.Log("炸雞");
+                    break;
+                default:
+                    Debug.Log("炸雞");
+                    break ;
+            }
+        }
     }
 }
