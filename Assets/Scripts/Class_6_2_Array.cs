@@ -89,17 +89,17 @@ namespace Jerry
             numbers[1] = new int[] { 9, 8 };
 
             // 取得數字 3 與 9
-            Debug.Log($"<color=#3ff>不規則陣列的數字 3 : {numbers[0][1]}");
-            Debug.Log($"<color=#3ff>不規則陣列的數字 9 : {numbers[1][0]}");
+            Debug.Log($"<color=#3ff>不規則陣列的數字 3 : {numbers[0][1]}</color>");
+            Debug.Log($"<color=#3ff>不規則陣列的數字 9 : {numbers[1][0]}</color>");
 
             // 將 8 改成 6
             numbers[1][1] = 6;
-            Debug.Log($"<color=#3ff>第二列的第二個 : {numbers[1][1]}");
+            Debug.Log($"<color=#3ff>第二列的第二個 : {numbers[1][1]}</color>");
 
             // 不規則陣列 : 包含多維陣列
             count[0] = new int[,] { { 1, 1 }, { 1, 1 } };
             count[1] = new int[,] { { 2, 2, 2 }, { 2, 2, 2 } };
-            Debug.Log($"<color=#3ff>count 第二陣列的[0, 0] : {count[1][0, 0]}");
+            Debug.Log($"<color=#3ff>count 第二陣列的[0, 0] : {count[1][0, 0]}</color>");
         }
     }
 }
