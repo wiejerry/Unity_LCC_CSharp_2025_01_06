@@ -1,36 +1,40 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace Jerry
 {
     /// <summary>
-    /// NPCÃş§O : NPC¦WºÙ»P¹ï¸Ü¤º®e¸ê®Æ¡A¦³¿é¥X NPC ¦WºÙ»P»¡¸Üªº¥\¯à
+    /// NPCé¡åˆ¥ : NPCåç¨±èˆ‡å°è©±å…§å®¹è³‡æ–™ï¼Œæœ‰è¼¸å‡º NPC åç¨±èˆ‡èªªè©±çš„åŠŸèƒ½
     /// </summary>
     public class Class_8_1_NPC
     {
         private string name;
         private string dialogue;
 
-        // «Øºc¤l : ¨S¦³¶Ç¦^Ãş§O¡A¦WºÙ»P¬Û¦Pªº¤½Ãö¤èªk
-        // ¹w³]µ²ºc¤l : ¨S¦³°Ñ¼Æ
+        // å»ºæ§‹å­ : æ²’æœ‰å‚³å›é¡åˆ¥ï¼Œåç¨±èˆ‡ç›¸åŒçš„å…¬é—œæ–¹æ³•
+        // é è¨­çµæ§‹å­ : æ²’æœ‰åƒæ•¸
         public Class_8_1_NPC()
         {
-            Debug.Log("<color=#f3d>¹w³]«Øºc¤l</color>");
+            Debug.Log("<color=#f3d>é è¨­å»ºæ§‹å­</color>");
         }
 
-        public Class_8_1_NPC(string _name)
+        // å»ºæ§‹å­çš„ç°¡å¯«
+        public Class_8_1_NPC(string _name) => name = _name;
+
+        public Class_8_1_NPC(string _name, string _dialogue)
         {
             name = _name;
-            Debug.Log("<color=#f3d>¦³°Ñ¼Æªº«Øºc¤l</color>");
+            dialogue = _dialogue;
+            Debug.Log("<color=#f3d>æœ‰åƒæ•¸çš„å»ºæ§‹å­</color>");
         }
 
         public void LogName()
         {
-            Debug.Log($"<color=#373>NPC ªº¦WºÙ : {name}</color>");
+            Debug.Log($"<color=#3f3>NPC çš„åç¨± : {name}</color>");
         }
 
         public void Talk()
         {
-            Debug.Log($"<color=#373>{dialogue}</color>");
+            Debug.Log($"<color=#3f3>{dialogue}</color>");
         }
     }
 }

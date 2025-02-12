@@ -1,23 +1,25 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace Jerry
 { 
     /// <summary>
-    /// Ãş§O Class
+    /// é¡åˆ¥ Class
     /// </summary>
     public class Class_8_1_Class : MonoBehaviour
     {
-        // Ãş§O :
-        // ¥Î¨Ó©w¸q¤@­Óª«¥ó¥H¤Î¥L©Ò¾Ö¦³ªº¸ê®Æ»P¥\¯à (¦¨­û)
+        // é¡åˆ¥ :
+        // ç”¨ä¾†å®šç¾©ä¸€å€‹ç‰©ä»¶ä»¥åŠä»–æ‰€æ“æœ‰çš„è³‡æ–™èˆ‡åŠŸèƒ½ (æˆå“¡)
 
         private void Awake()
         {
-            // ¹ê¤O¤Æ NPC ¨ÃÀx¦s¦b npcJack ÅÜ¼Æ¤º
-            Class_8_1_NPC npcJack = new Class_8_1_NPC();
-            Class_8_1_NPC npcJerry = new Class_8_1_NPC("Jerry");
+            // å¯¦åŠ›åŒ– NPC ä¸¦å„²å­˜åœ¨ npcJack è®Šæ•¸å…§
+            Class_8_1_NPC npcJack = new Class_8_1_NPC("å‚‘å…‹");
+            Class_8_1_NPC npcJerry = new Class_8_1_NPC("Jerry","ä½ å¥½å•Š~");
 
             npcJack.LogName();
             npcJerry.LogName();
+            npcJack.Talk();
+            npcJerry.Talk();
         }
     }
 }
