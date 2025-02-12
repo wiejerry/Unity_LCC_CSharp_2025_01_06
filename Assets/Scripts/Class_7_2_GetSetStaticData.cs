@@ -30,5 +30,19 @@ namespace Jerry
             // 呼叫靜態方法
             Class_7_2_Static.Kick();
         }
+
+        public Class_7_2_slime slimeGreen, slimeBlue;
+
+        private void Start()
+        {
+            // 非靜態成員
+            slimeGreen.hp -= 10;
+            Debug.Log($"<color=#3f3>綠色史萊姆 HP : {slimeGreen.hp}</color>");
+            slimeBlue.hp -= 10;
+            Debug.Log($"<color=#3f3>藍色史萊姆 HP : {slimeBlue.hp}</color>");
+
+
+            Debug.Log($"<color=#3f3>史萊姆移動速度 : {Class_7_2_slime.moveSpeed}</color>");
+        }
     }
 }
