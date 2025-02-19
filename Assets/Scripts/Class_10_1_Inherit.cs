@@ -16,10 +16,13 @@ namespace Jerry
             LogSystem.LogWithColor($"史萊姆1號的攻擊 : {slime1.attack}", "#f3d");
         }
     }
+
     public class Goblin
     {
-        public int attack;
-        public int defense;
+        public int attack;              // 公開 : 所有類別可以存取
+        public int defense;             
+        private float moveSpeed;        // 私人 : 此類別可以存取
+        protected float hp;             // 保護 : 子類別可以存取
 
         public Goblin(int _attack, int _defense)
         {
@@ -37,6 +40,13 @@ namespace Jerry
         public Slime(int _attack, int _defense) : base(_attack, _defense)
         {
 
+        }
+
+        public void Initlize()
+        {
+            attack = 7;
+            // moveSpeed = 3.5f;
+            hp = 10;
         }
     }
 }
