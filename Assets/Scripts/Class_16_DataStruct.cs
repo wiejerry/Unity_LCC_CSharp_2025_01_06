@@ -1,6 +1,7 @@
 ﻿using Jerry.Tools;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Jerry.Class_16
 {
@@ -67,19 +68,55 @@ namespace Jerry.Class_16
             }
             #endregion
 
+            #region 堆疊
             // 堆疊 : 先進後出， 類似椅子堆疊在一起
             Stack<string> enemys = new Stack<string>();
             // 放資料進入堆疊
             enemys.Push("史萊姆");
             enemys.Push("哥布林");
             LogStack<string>(enemys);
+            // 拿資料並且不移除
+            enemys.Peek();
+            LogStack<string>(enemys);
+            // 拿資料並且移除
+            enemys.Pop();
+            LogStack<string>(enemys);
+            // 判斷是否包含某些資料
+            LogSystem.LogWithColor($"{enemys.Contains("哥布林")}", "#3f6");
+            // 清除所有資料
+            enemys.Clear();
+            LogStack<string>(enemys);
+            #endregion
+
+            // Queue 佇列 : 先進先出，先被拿進來的資料先被拿出
+            Queue<string> player = new Queue<string>();
+            player.Enqueue("盜賊");
+            player.Enqueue("法師");
+            player.Enqueue("戰士");
+            LogQueue<string>(player);
+            //拿東西不刪除，與堆疊的 Peek 相同
+            LogSystem.LogWithColor(player.Peek(), "#f33");
+            LogQueue<string>(player);
+            // 拿東西並刪除，與堆疊 pop 相同
+            LogSystem.LogWithColor(player.Dequeue(), "#f33");
+            LogQueue<string>(player);
         }
 
         private void LogStack<T>(Stack<T> stack)
         {
+            LogSystem.LogWithColor($"------------------", "#fff");
             foreach (var item in stack)
             {               
                 LogSystem.LogWithColor($"堆疊資料 : {item}", "#f77");
+            }
+        }
+
+        private void LogQueue<T>(Queue<T> queue)
+        {
+            LogSystem.LogWithColor($"------------------", "#fff");
+            foreach (var item in queue)
+            {
+                LogSystem.LogWithColor($"佇列資料 : {item}", "#7f7");
             }
         }
     }
